@@ -1,0 +1,11 @@
+.gameContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 810px;
+    height: 610px;
+    border: 30px solid;
+    border-image: url(img/brickwall.png) 25% round;
+    border-image-repeat: repeat;
+    box-shadow: inset 0 0 2em rgb(61, 61, 59);
+}
