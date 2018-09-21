@@ -20,8 +20,7 @@ function create() {
     game.physics.arcade.checkCollision.down = false;
 
     game.add.tileSprite(0, 0, 800, 600, "background");
-    //ауди маркеры
-    gameTool.fx = createAudio("sfx");
+       gameTool.fx = createAudio("sfx");
 
     gameTool.paddle = createPaddle(game.world.centerX, 500);
     gameTool.ball = createBall(game.world.centerX, gameTool.paddle.y - 12);
