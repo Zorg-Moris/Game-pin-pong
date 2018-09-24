@@ -15,8 +15,8 @@ let textInfo = {
 };
 
 //ф-ция создания платформы (ракетка)
-function createPaddle(x, y) {
-    let paddle = game.add.sprite(x, y, "paddle");
+function createPaddle(x, y, img) {
+    let paddle = game.add.sprite(x, y, img);
     paddle.anchor.setTo(0.5, 0.5);
 
     game.physics.enable(paddle, Phaser.Physics.ARCADE);
@@ -29,8 +29,8 @@ function createPaddle(x, y) {
 };
 
 // ф-ция создания мяча
-function createBall(x, y) {
-    let ball = game.add.sprite(x, y, "ball");
+function createBall(x, y, img) {
+    let ball = game.add.sprite(x, y, img);
     ball.anchor.set(0.5);
     ball.checkWorldBounds = true;
 
@@ -109,7 +109,7 @@ function checkSpeed() {
     }
 };
 
-// отбивания мяча от ракетки
+// отбивание мяча от ракетки
 function ballHitPaddle(ball, paddle) {
     gameTool.fx.play("numkey");
     textInfo.score += 5;
